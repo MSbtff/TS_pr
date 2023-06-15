@@ -27,3 +27,9 @@ let point: {x: number; y: number} = {
   x: 10,
   y: 20,
 };
+
+//Function
+// 함수에 대한 설명
+const logNumber: (i: number) => void = (i: number) => {
+  console.log(i);
+};
