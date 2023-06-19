@@ -36,8 +36,11 @@ const logNumber: (i: number) => void = (i: number) => {
 
 // When to use annotations
 // 1) Function that returns the 'any' type
-const jsion = '{"x: 10, "y": 20}';
-const coordinates = JSON.parse(jsion);
+const json = '{"x: 10, "y": 20}';
+const coordinates = JSON.parse(json);
 console.log(coordinates); //{x: 10, y: 20};
 
 coordinates.askdfjhaskfjhasfkasjhfkasjhf; //error any 타입이라서 에러가 안남
+
+// 위에  json과 coordinates를 보면 any 타입이라서 좋지 않다.
+// 그렇기에 annotation을 사용해서 좋은 코드를 만들어야 한다.
