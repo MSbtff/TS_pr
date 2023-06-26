@@ -69,4 +69,4 @@ for (let i = 0; i < numbers.length; i++) {
   }
 }
 
-// | 는 or를 의미한다.
+// |(파이프) 는 or를 의미한다.
