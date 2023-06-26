@@ -28,3 +28,26 @@ function divide(a: number, b: number): number {
 const multiply = function (a: number, b: number): number {
   return a * b;
 };
+
+// void는 함수가 아무런 값을 반환하지 않을 때 사용한다.
+// void를 반환하는 함수는 null을 반환할 수 있다.
+// 그래서 return 문을 쓰면 오류가 뜸
+const logger = (message: string): void => {
+  console.log(message);
+  return null;
+};
+
+// never는 끝가지 갈 수 없다는 뜻으로
+// 이 안에서 함수를 완전히 실행하지는 않는다.
+// 오류를 throw하고 함수를 일찍 끝낸고 어떤 값도 반환하지 않는다.
+const throwError = (message: string): never => {
+  throw new Error(message);
+};
+
+// 이 경우는 결국 return 값이 있는 경우
+const throwError1 = (message: string): string => {
+  if (message) {
+    throw new Error(message);
+  }
+  return message;
+};
